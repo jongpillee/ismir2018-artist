@@ -1,6 +1,6 @@
 # ismir2018-artist
 
-***A implementation of "Representation Learning of Music using Artist labels"***
+***A implementation of "Representation Learning of Music using Artist labels, ISMIR 2018"***
 
-This is a implementation of "[*Representation Learning of Music using Artist labels*][10]" using [Keras]. We will be updating the repo soon!!.
+We will be updating the repo soon!!.
 
