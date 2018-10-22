@@ -2,8 +2,6 @@
 
 ***An implementation of "Representation Learning of Music using Artist labels, ISMIR, 2018"***
 
-The repository will be updated soon!!.
-
 ----------------------------------
 
 ## Requirements
