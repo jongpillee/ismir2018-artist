@@ -1,0 +1,1 @@
+The features extracted from trained CNN will be placed in this directory.
