@@ -2,10 +2,10 @@ from keras.layers import Conv1D, MaxPool1D, BatchNormalization, GlobalAvgPool1D,
 from keras.models import Model
 from keras.regularizers import l2
 
-def model_siamese(num_frame,J):
+def model_siamese(num_frame,N_negs):
 	pos_anchor = Input(shape = (num_frame,128))
 	pos_item = Input(shape = (num_frame,128))
-	neg_items = [Input(shape = (num_frame,128)) for j in range(J)]
+	neg_items = [Input(shape = (num_frame,128)) for j in range(N_negs)]
 
 	# item model **audio**
 	conv1 = Conv1D(128,4,padding='same',use_bias=True,kernel_regularizer=l2(1e-5),kernel_initializer='he_uniform')
@@ -97,10 +97,10 @@ def model_siamese(num_frame,J):
 	neg_item_activ5s = [activ5(neg_item_bn5) for neg_item_bn5 in neg_item_bn5s]
 	neg_item_sems = [item_sem(neg_item_activ5) for neg_item_activ5 in neg_item_activ5s]
 
-	RQD_p = dot([pos_anchor_sem, pos_item_sem], axes = 1, normalize = True)
-	RQD_ns = [dot([pos_anchor_sem, neg_item_sem], axes = 1, normalize = True) for neg_item_sem in neg_item_sems]
+	v_p = dot([pos_anchor_sem, pos_item_sem], axes = 1, normalize = True)
+	v_ns = [dot([pos_anchor_sem, neg_item_sem], axes = 1, normalize = True) for neg_item_sem in neg_item_sems]
 
-	prob = concatenate([RQD_p] + RQD_ns)
+	prob = concatenate([v_p] + v_ns)
 
 	# for hinge loss
 	output = Activation('linear')(prob)
