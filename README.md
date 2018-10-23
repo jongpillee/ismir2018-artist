@@ -31,5 +31,4 @@ Here are examples of how to run the code. (To run 1. and 2., you need MSD audio 
 
 ## Reference
 
-[1] [Representation Learning of Music Using Artist Labels](http://ismir2018.ircam.fr/doc/pdfs/168_Paper.pdf), Jiyoung Park*, Jongpil Lee*, Jangyeon Park, Jung-Woo Ha and Juhan Nam
-Proceedings of the 19th International Society for Music Information Retrieval Conference (ISMIR), 2018
+[1] [Representation Learning of Music Using Artist Labels](http://ismir2018.ircam.fr/doc/pdfs/168_Paper.pdf), Jiyoung Park*, Jongpil Lee*, Jangyeon Park, Jung-Woo Ha and Juhan Nam, Proceedings of the 19th International Society for Music Information Retrieval Conference (ISMIR), 2018
