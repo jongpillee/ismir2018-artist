@@ -27,8 +27,7 @@ def model_siamese(num_frame,N_negs):
 	conv5 = Conv1D(256,1,padding='same',use_bias=True,kernel_regularizer=l2(1e-5),kernel_initializer='he_uniform')
 	bn5 = BatchNormalization()
 	activ5 = Activation('relu')
-	drop1 = Dropout(0.5)
-
+	
 	item_sem = GlobalAvgPool1D()
 	
 	# pos anchor

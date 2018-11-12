@@ -6,6 +6,7 @@
 
 ## Requirements
 
+Code is written in Python 2.7
 - tensorflow-gpu==1.4.0
 - keras==2.0.8
 
